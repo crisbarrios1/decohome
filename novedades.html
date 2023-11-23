@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/imagenes-y-videos/favicon72x72.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Deco & Home</title>
+</head>
+<body>
+<header class="navFormulario">
+    <nav>
+        <a href="index.html">
+            <div class="container-logo">
+                <img id="imagen_logo" src="imagenes-y-videos/logo_png.png">
+            </div>
+        </a>
+        <div class="burguer-menu">
+            <label for="nav-burger" class="nav-label">
+                <img src="./imagenes-y-videos/menu-regular-24.png" alt="">
+            </label>
+        </div>
+        <input class="nav-input" id="nav-burger" type="checkbox" >
+        <div class="containerLinks">
+            <a class="nav-enlace" href="index.html">INICIO</a>
+            <a class="nav-enlace" href="cocina.html">COCINA</a>
+            <a class="nav-enlace" href="habitaciones.html">HABITACIONES</a>
+            <a class="nav-enlace" href="baño.html">BAÑO</a>
+        </div>
+
+
+    </nav>  
+</header>
+<main  id="inicio-pagina">       
+<div class="container w-75 rounded-5">
+    <div class="row  shadow">
+        <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 mt-5">
+
+        </div>
+        <div class="col p-5">
+            <h2 class="fw-bold text-center col-xl-fs-4 col-sm-fs-3 py-5"><br>RECIBE NUESTRO NEWSLETTER <br>Y ENTERATE DE TODAS LAS NOVEDADES</h2>
+            <form id="contact-form" class="row g-3 needs-validation" action="https://formspree.io/f/xwkwpwag"
+            method="POST" novalidate>
+                <div class="col-12">
+                    <label for="nameId" class="form-label">Nombre</label>
+                    <input type="text" name="name" class="form-control" id="nameId" placeholder="Ingrese su nombre" required>
+                    <div class="valid-feedback">
+                        <p>✔ Nombre ingresado</p>
+                    </div>
+                    <div class="invalid-feedback">
+                        <p>❌ Es necesario que ingrese su nombre</p>
+                    </div>
+                </div>
+                <div class="col-12 mt-5">
+                    <label for="surnameId" class="form-label">Apellido</label>
+                    <input type="text" name="surname" class="form-control" id="surnameId" placeholder="Ingrese su apellido" required>
+                    <div class="valid-feedback">
+                        <p>✔ Apellido ingresado</p>
+                    </div>
+                    <div class="invalid-feedback">
+                        ❌ Es necesario que ingrese su apellido
+                    </div>
+                </div>
+                <div class="col-12 mt-5">
+                    <div class="">
+                        <label for="emailInput" class="form-label">E-mail</label>
+                        <input id="emailInput" name="email" class="form-control" type="email" placeholder="Ingrese su email" required>
+                        <div class="valid-feedback">
+                            <p>✔ Has ingresado tu correo electrónico</p>
+                        </div>
+                        <div class="invalid-feedback">
+                            <p>❌ Es necesario que ingrese su correo electrónico</p>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-5">
+                        <label for="pais">País</label>
+                        <select name="pais" id="pais" class="form-select" required>
+                            <option selected disabled value="">Seleccione...</option>
+                            <option value="">Argentina</option>
+                            <option value="">México</option>
+                            <option value="">Colombia</option>
+                            <option value="">Venezuela</option>
+                            <option value="">Perú</option>
+                        </select>
+                        <div class="valid-feedback">
+                            <p>✔ País ingresado</p>
+                        </div>
+                        <div class="invalid-feedback">
+                            <p>❌ Es necesario que ingrese su país</p>
+                        </div>
+                    </div>
+                    <div class="form-check mt-5">
+                        <input class="form-check-input" name="checkbox" type="checkbox" id="terms" required>
+                        <label for="terms" class="form-check-label" >Acepto los términos y condiciones</label>
+                        <div class="valid-feedback">
+                            <p>✔ Condiciones aceptadas</p>
+                        </div>
+                        <div class="invalid-feedback">
+                            <p>❌ Es necesario que aceptes las condiciones</p>
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary mt-5 mb-5" value="send" >Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="contenedorLinks">
+          <div class="container-footer">
+              <a href="./quienesSomos.html">¿Quiénes somos?</a>
+              <a href="./nuestrasMarcas.html">Nuestras marcas</a>
+              <a href="./disenoProyectos.html">Diseño de proyectos</a>
+            </div> 
+            <div class="container-footer">
+                <a href="./empleo.html">Trabaja con nosotros</a>
+                <a href="./atencionCliente.html">Atención al cliente</a>
+                <a href="./eventos.html">Eventos</a>                  
+            </div> 
+            <div class="container-footer">
+                <a href="./sucursales.html">Sucursales</a>
+                <a href="./terminos.html">Términos y condiciones</a>
+                <a href="./mapaDelSitio.html">Mapa del sitio</a>
+            </div>
+    </div>
+    <div class="footer-maps">
+          <!-- ----------- mapa ocupando todo el ancho -------------- -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13138.544583734803!2d-58.4224103!3d-34.5880721!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb580b820c393%3A0xd9a02c32188cd195!2sVandeco%20%26%20Design!5e0!3m2!1ses-419!2sar!4v1698456558876!5m2!1ses-419!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  
+    <div class="footer-redes"> 
+        <!-- ----------- aca van botones de redes (caja arriba) y derechos reservados (caja abajo)-------------- -->
+        <section class="buttons">
+            <a href="https://www.instagram.com/decohomemdp">
+                <img src="./imagenes-y-videos/instagram-logo.png" alt="">
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=5492235900490&text&type=phone_number&app_absent=0">
+                <img src="./imagenes-y-videos/whatsapp-logo.png" alt="">
+            </a>
+            <a href="https://www.facebook.com/decohomemdp/">
+                <img src="./imagenes-y-videos/facebook-logo.png" alt="">                
+            </a>                
+        </section>  
+    </div>    
+    <div class="copyright">
+        <p>Copyright &copy; Cristian Barrios / Nestor Santos 2023 </p>
+    </div>     
+</footer>
+<script>
+
+    //  Script de Bootstrap para validar formularios
+    (() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+
+</script>
+</body>
+
+</html>
