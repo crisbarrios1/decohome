@@ -9,6 +9,11 @@
     
 }
 
+.btn-primary {
+    --bs-btn-bg: #4d2faf;
+    --bs-btn-border-color: none;
+  
+}
 
 .contenedorLinks{
   display:flex;
@@ -504,8 +509,8 @@ margin-bottom: 7em;
     }
 
     .nav-enlace{
-        font-size: 13px;
-        padding: 1em 1.4em;
+        font-size: 20px;
+        padding: 0 0;
     }
 
     .container-logo{
