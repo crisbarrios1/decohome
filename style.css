@@ -175,7 +175,7 @@ margin-bottom: 7em;
 }
 
 .margin-top-extra{
-    margin-top:10em;
+    margin-top:1em;
 }
 
 .destacados-imgh2{
@@ -244,10 +244,14 @@ margin-bottom: 7em;
 }   
 
 .txtSeleccionados{
-    padding: 8em 0 0 0;
+    padding: 10em 0 0 0;
     text-align: center;
     font-size: 1.5em;
     color: #4E2780;
+}
+
+.mainAltaProd{
+    margin-top: 15em;
 }
 
 .prodSeleccionados{
@@ -263,9 +267,22 @@ margin-bottom: 7em;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
-    padding: 3em 6em 0; 
-    margin-top: 10em;
+    flex-wrap: nowrap;
+    padding: 1em 6em 0; 
+    margin-top: 1em;
+    }
+
+    .precio{
+        background-color: darksalmon;
+        border-radius: 2em;
+        width: 13em;
+        height: 3em;
+        text-align: center;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 3em auto;
     }
 
 
@@ -291,6 +308,7 @@ margin-bottom: 7em;
 
 .prodSeleccionados-imgh2b{
     padding: 1em;
+    padding-bottom: 2em;
     }
     
     .prodSeleccionados-imgh2b img:hover{
@@ -305,7 +323,7 @@ margin-bottom: 7em;
     
     .prodSeleccionados-imgh2b h2{
     text-align: center;
-    margin-bottom: 3em;
+    margin-bottom: .4em;
     }
     
 
@@ -566,11 +584,15 @@ margin-bottom: 7em;
         display: none;
     }
 
+
     main{
         margin-top:9em;
     }
 
-     
+    .mainAltaProd input{
+        display: block;
+    }
+    
     .ajuste-fuente2{
         font-size: 19em;
     } 
@@ -862,11 +884,12 @@ margin-bottom: 7em;
         }
         
 .prodSeleccionadosb{
-    margin-top: 10em;
+    margin-top: 0;
 }
 
 .prodSeleccionados-imgh2b{
     padding-bottom: 2em;
+   
 }
 
 .prodSeleccionados-imgh2b img {
@@ -880,6 +903,26 @@ margin-bottom: 7em;
     text-align: center;
     font-size: 1.2em;
 }
+
+.prodSeleccionados-imgh2b h3 {
+    margin: 0 3em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.precio{
+    background-color: darksalmon;
+    border-radius: 2em;
+    width: 13em;
+    height: 3em;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
     .frase-slider{
         font-size: 8em;
     }

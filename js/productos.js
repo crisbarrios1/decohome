@@ -5,7 +5,7 @@ const { createApp } = Vue
                 productos:[],
                 //url:'http://localhost:5000/productos',
                 // si el backend esta corriendo local usar localhost 5000(si no lo subieron a pythonanywhere)
-                url:'http://mcerda.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
+                url:'https://abelitu.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
                 error:false,
                 cargando:true,
                 /*atributos para el guardar los valores del formulario */
@@ -14,6 +14,7 @@ const { createApp } = Vue
                 imagen:"",
                 stock:0,
                 precio:0,
+                secciones:"",
                 }
                 },
                 methods: {
@@ -35,7 +36,7 @@ const { createApp } = Vue
                 method: 'DELETE',
             }
             fetch(url, options)
-                .then(res => res.text()) // or res.json()
+                .then(res => res.json()) // or res.json()
                 .then(res => {
                     location.reload();
                 })
@@ -45,7 +46,9 @@ const { createApp } = Vue
                 nombre:this.nombre,
                 precio: this.precio,
                 stock: this.stock,
-                imagen:this.imagen
+                imagen:this.imagen,
+                altaProducto:this.altaProducto
+
             }
             var options = {
                 body:JSON.stringify(producto),

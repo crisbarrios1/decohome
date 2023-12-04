@@ -14,7 +14,7 @@
     <div id="app" class="container">
         <h1>Productos</h1>
         <br>
-         <a class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
+         <a class="btn btn-primary" href="producto_nuevo.html">Agregar producto</a>
         <br>
         <br>
         <div v-if="error">
@@ -36,6 +36,7 @@
                             <th scope="col">Precio</th>
                             <th scope="col">Stock</th>
                             <th scope="col">Imagen</th>
+                            <th scope="col">Sección</th>
                             <th scope="col">Acciones</th>
                             </tr>
                         </thead>
@@ -48,6 +49,7 @@
                                 <td>
                                     <img width="60" :src="producto.imagen" :alt="producto.nombre">
                                 </td>
+                                <td>{{producto.altaProducto}}</td>
                                 <td>
                                     <a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id" >Editar</a>
                                     <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>

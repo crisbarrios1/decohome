@@ -89,12 +89,24 @@
             <div class="txtSeleccionados">
                 <h2>SELECCIONADOS</h2>
             </div>
-        <section  class="prodSeleccionadosb margin-top-extra">
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen1.png" alt="">
-                    <h2>Sillón ocre gamuzado</h2>
-                </article>
-                <article class="prodSeleccionados-imgh2b">
+        <section  class="prodSeleccionadosb margin-top-extra">            
+            <article class="prodSeleccionados-imgh2b" id="app">
+                <div class="table table-bordered">
+                    <div class="" v-for="producto in productos" id="V-for">
+                        <div>
+                            <img :src="producto.imagen" :alt="producto.nombre">
+                        </div>
+                        <div>
+                             <h2>{{producto.nombre}}</h2>
+                        </div>
+                        <div class="precio">
+                            <h3>$ {{producto.precio}}⁰⁰</h3>
+                        </div>
+                    </div>
+                </div>
+            </article> 
+       
+                <!-- <article class="prodSeleccionados-imgh2b">
                     <img src="./imagenes-y-videos/imagen2.png" alt="">
                     <h2>Mueble para baño</h2>
                    </article>
@@ -149,11 +161,11 @@
                 <article class="prodSeleccionados-imgh2b">
                     <img src="./imagenes-y-videos/imagen15.png" alt="">
                     <h2>Baúl para juguetes</h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
+                   </article> -->
+                <!-- <article class="prodSeleccionados-imgh2b">
                     <img src="./imagenes-y-videos/imagen16.jpg" alt="">
                     <h2>Mesa de luz laminada</h2>
-                   </article>                
+                   </article>                 -->
         </section>
     </main>
     <div class="botonSubir">
@@ -187,7 +199,7 @@
         <div class="footer-redes"> 
             <!-- ----------- aca van botones de redes (caja arriba) y derechos reservados (caja abajo)-------------- -->
             <section class="buttons">
-                <a href="https://www.instagram.com/decohomemdp">
+                <a href="./productos.html">
                     <img src="./imagenes-y-videos/instagram-logo.png" alt="">
                 </a>
                 <a href="https://api.whatsapp.com/send/?phone=5492235900490&text&type=phone_number&app_absent=0">
@@ -202,5 +214,7 @@
             <p>Copyright &copy; Cristian Barrios / Nestor Santos 2023 </p>
         </div>     
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/productos.js"></script>
 </body>
 </html>
