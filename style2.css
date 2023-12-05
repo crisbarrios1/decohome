@@ -198,7 +198,7 @@ margin-bottom: 7em;
 .destacados-imgh2 img{
     width: 9.9em;
     
-    border-radius: 13px;
+    border-radius: 3px;
 }
 
 .destacados-imgh2:hover{
@@ -245,9 +245,19 @@ margin-bottom: 7em;
             padding-bottom: .9em;
         }
 
+
+.prodSeleccionados-imgh2c {    /* COpiar */
+    padding: 1em;
+    padding-bottom: 2em;
+    width: 21.4em;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
 .ajuste-fuente{
     font-size: 1.4em;
-}   
+}
 
 .contenedorCards{
     display: flex;
@@ -259,7 +269,6 @@ margin-bottom: 7em;
     border-radius: 13px;
 }
 
-
 .txtSeleccionados{
     padding: 10em 0 0 0;
     text-align: center;
@@ -269,6 +278,12 @@ margin-bottom: 7em;
 
 .mainAltaProd{
     margin-top: 15em;
+}
+
+.table-bordered{
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .prodSeleccionados{
@@ -289,28 +304,18 @@ margin-bottom: 7em;
     margin-top: 1em;
     }
 
-    .prodSeleccionadosc{   /* COpiar */
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 1em 6em 0; 
-        margin-top: 5em;
-    }
+.prodSeleccionadosc{   /* COpiar */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1em 6em 0; 
+    margin-top: 1em;
+}
 
-    .prodSeleccionados-imgh2c {    /* COpiar */
-        padding: 1em;
-        padding-bottom: 2em;
-        width: 21.4em;
-        display: flex;
-        flex-wrap: wrap;
-        
-    }
-    
-
-    .prodSeleccionados-imgh2c img:hover{
-        border: 3px solid rgba(112, 6, 212, 0.185); /* COpiar */
-    }
+.prodSeleccionados-imgh2c img:hover{
+    border: 3px solid rgba(112, 6, 212, 0.185); /* COpiar */
+}
 
     .precio{
         background-color: darksalmon;
@@ -371,9 +376,7 @@ margin-bottom: 7em;
     }
     
     .prodSeleccionados-imgh2b img{
-    width: 18em;
     border-radius: 13px;
-    margin: 0 1em;
     }
     
     .prodSeleccionados-imgh2b h2{
@@ -702,8 +705,7 @@ margin-bottom: 7em;
             font-size: 1.1em;
             padding-bottom: 0;
         }
-
-
+    
     .container-titulo{
         font-size: 1em;
     }
