@@ -10,7 +10,7 @@ nombre:"",
 imagen:"",
 stock:0,
 precio:0,
-url:'https://abelitu.pythonanywhere.com/productos'+id,
+url:'https://abelitu.pythonanywhere.com/productos/'+id,
 // url:'http://mcerda.pythonanywhere.com/productos/'+id,
 }
 },
