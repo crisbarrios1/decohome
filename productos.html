@@ -49,7 +49,8 @@
                                 <td>
                                     <img width="60" :src="producto.imagen" :alt="producto.nombre">
                                 </td>
-                                <td>{{producto.altaProducto}}</td>
+                                <td>{{producto.secciones}}</td>
+                                
                                 <td>
                                     <a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id" >Editar</a>
                                     <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>
