@@ -30,7 +30,7 @@ productsList.addEventListener('click', e => {
 
 		const infoProduct = {
 			quantity: 1,
-			title: product.querySelector('.articulo').textContent,
+			title: product.querySelector('h2').textContent,
 			price: product.querySelector('.price').textContent,
 		};
 
@@ -125,3 +125,44 @@ const showHTML = () => {
 	valorTotal.innerText = `$${total}`;
 	countProducts.innerText = totalOfProducts;
 };
+
+
+new Vue({
+    el: '#app',
+    data: {
+        productos: [], // Tu array de productos
+        allProducts: [] // Tu array de productos en el carrito
+    },
+    methods: {
+        addToCart(producto) {
+			console.log(producto)
+            const infoProduct = {
+                quantity: 1,
+                title: producto.nombre,
+                price: parseFloat(producto.precio.replace('$', '').replace('⁰⁰', '')),
+            };
+
+            const exists = this.allProducts.some(product => product.title === infoProduct.title);
+
+            if (exists) {
+                const products = this.allProducts.map(product => {
+                    if (product.title === infoProduct.title) {
+                        product.quantity++;
+                        return product;
+                    } else {
+                        return product;
+                    }
+                });
+                this.allProducts = [...products];
+            } else {
+                this.allProducts = [...this.allProducts, infoProduct];
+            }
+
+            // Puedes llamar a otras funciones o realizar actualizaciones necesarias
+            this.showHTML();
+        },
+        showHTML() {
+            // Lógica para mostrar HTML
+        }
+    }
+});

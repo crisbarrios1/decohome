@@ -268,7 +268,7 @@ margin-bottom: 7em;
 }
 
 .mainAltaProd{
-    margin-top: 15em;
+    margin-top: 12em;
 }
 
 .prodSeleccionados{
@@ -580,6 +580,65 @@ margin-bottom: 7em;
     background-image: url("./imagenes-y-videos/logo_png.png");
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.body-crud{
+    background-color: #F5F5F5;
+}
+
+.nav-crud{
+    display: flex;
+    justify-content:space-evenly
+}
+
+.nav-crud .container-logo-crud{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.crud{
+    margin-top: 12em;
+}
+
+.container-crud{
+    width: 60%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-enlace-prodNuevo{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 1px 20px;
+    text-decoration: none;
+}
+
+.nav-enlace-prodNuevo:hover{
+    color: white;
+   background-color: blueviolet ;
+}
+
+
+.table-responsive-crud{
+    overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-crud {
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+
+.table-bordered-crud{
+    border-width: 1px 0;
+}
+
+.container-update{
+    margin-top: 12em;
 }
 
 @media( min-width: 350px) and (max-width: 500px){ 

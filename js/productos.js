@@ -3,12 +3,10 @@ const { createApp } = Vue
         data() {
             return {
                 productos:[],
-                //url:'http://localhost:5000/productos',
-                // si el backend esta corriendo local usar localhost 5000(si no lo subieron a pythonanywhere)
-                url:'https://abelitu.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
+                url:'https://abelitu.pythonanywhere.com/productos', 
                 error:false,
                 cargando:true,
-                /*atributos para el guardar los valores del formulario */
+                
                 id:0,
                 nombre:"",
                 imagen:"",
@@ -36,7 +34,7 @@ const { createApp } = Vue
                 method: 'DELETE',
             }
             fetch(url, options)
-                .then(res => res.json()) // or res.json()
+                .then(res => res.json()) 
                 .then(res => {
                     location.reload();
                 })

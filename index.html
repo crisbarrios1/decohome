@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/imagenes-y-videos/favicon72x72.png" type="image/png">
+    <link rel="icon" href="/imagenes-y-videos/favicon72x72.png?" type="image/png">
     <link rel="stylesheet" href="./carrito-compras-javascript-main/carritoStyles.css">
     <link rel="stylesheet" href="./style.css">
     <title>Deco & Home</title>
@@ -23,7 +23,6 @@
         </div>
         <input class="nav-input" id="nav-burger" type="checkbox" >
         <div class="containerLinks">
-            <a class="nav-enlace" href="index.html">INICIO</a>
             <a class="nav-enlace" href="cocina.html">COCINA</a>
             <a class="nav-enlace" href="habitaciones.html">HABITACIONES</a>
             <a class="nav-enlace" href="baño.html">BAÑO</a>
@@ -34,8 +33,7 @@
     </nav>
     <nav class="miniNav">
         <a href="index.html">
-            <div class="container-logo">
-                
+            <div class="container-logo">                
             </div>
         </a>
         <div class="container-icon">
@@ -45,7 +43,7 @@
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
-                    stroke="currentColor"
+                    stroke="white"
                     class="icon-cart"
                 >
                     <path
@@ -139,72 +137,11 @@
                         </div>
                         <div class="precio">
                             <h3 class="price">$ {{producto.precio}}⁰⁰</h3>
-                            <div></div><button class="btn-add-cart">Añadir al carrito</button>
+                            <div></div><button class="btn-add-cart" v-on:click="addToCart(producto)">Añadir al carrito</button>
                         </div>
                     </div>
                 </div>
             </article> 
-       
-                <!-- <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen2.png" alt="">
-                    <h2>Mueble para baño</h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen3.png" alt="">
-                    <h2>Mesa chica con cajón</h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen4.png" alt="">
-                    <h2>Mesa de luz </h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen5.png" alt="">
-                    <h2>Mesa para smartv</h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen6.png" alt="">
-                    <h2>Sillón tela verde</h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen7.png" alt="">
-                    <h2>Organizador para cocina</h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen8.png" alt="">
-                    <h2>Escritorio hierro/madera</h2>
-                    </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen9.png" alt="">
-                    <h2>Mueble organizador </h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen10.png" alt="">
-                    <h2>Sillón ecocuero verde</h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen11.jpg" alt="">
-                    <h2>Placard madera laminada</h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen12.jpeg" alt="">
-                    <h2>Velador madera</h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen13.png" alt="">
-                    <h2>Biblioteca con cajones</h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen14.png" alt="">
-                    <h2>Porta lámparas madera</h2>
-                   </article>
-                <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen15.png" alt="">
-                    <h2>Baúl para juguetes</h2>
-                   </article> -->
-                <!-- <article class="prodSeleccionados-imgh2b">
-                    <img src="./imagenes-y-videos/imagen16.jpg" alt="">
-                    <h2>Mesa de luz laminada</h2>
-                   </article>                 -->
         </section>
     </main>
     <div class="botonSubir">

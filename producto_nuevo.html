@@ -13,26 +13,15 @@
         <link rel="stylesheet" href="style.css">
     </head>
 <body>
-    <nav>
+    <nav class="nav-crud">
         <a href="index.html">
-            <div class="container-logo ">
-                <img id="imagen_logo" src="../imagenes-y-videos/logo_png.png">
+            <div class="container-logo-crud">
+                <img id="imagen_logo" src="imagenes-y-videos/logo_png.png">
             </div>
         </a>
-        <!-- <div class="burguer-menu">
-            <label for="nav-burger" class="nav-label">
-                <img src="../imagenes-y-videos/menu-regular-24.png" alt="">
-            </label>
-        </div>
-        <input class="nav-input" id="nav-burger" type="checkbox" >
         <div class="containerLinks">
-            <a class="nav-enlace" href="../seccionesDestacadas/altaTextiles.html">Alta textiles</a>
-            <a class="nav-enlace" href="../seccionesDestacadas/altaObjetos.html">Alta objetos</a>
-            <a class="nav-enlace" href="../seccionesDestacadas/altaPlantas.html">Alta plantas</a>
-            <a class="nav-enlace" href="../seccionesDestacadas/altaCristaleria.html">Alta cristalería</a>
-            <a class="nav-enlace" href="../seccionesDestacadas/altaAccesorios.html">Alta accesorios</a>
-            <a class="nav-enlace" href="../seccionesDestacadas/altaIluminacion.html">Alta iluminación</a>
-        </div> -->
+            <a class="nav-enlace-prodNuevo" href="./productos.html">Productos</a>
+        </div>
     </nav>
 <main class="mainAltaProd">
     <div class="container" id="app">
@@ -57,13 +46,13 @@
                 <img width="100" :src="imagen" alt="">
             </div>
             <div>
-                <!-- <div class="form-check mb-3 mt-5">
+               <div id="miSelect" v-model="secciones"  class="form-check mb-3 mt-5">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" v-model="secciones">
                     <label class="form-check-label" for="flexRadioDefault1">
                         Sección textiles
                     </label>
-                    </div>
-                <div class="form-check mb-3">
+                </div>
+                <div id="miSelect" v-model="secciones"  class="form-check mb-3">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" v-model="secciones">
                     <label class="form-check-label" for="flexRadioDefault2">
                         Sección objetos
@@ -92,8 +81,8 @@
                     <label class="form-check-label" for="flexRadioDefault6">
                         Sección iluminación
                     </label>
-                </div> -->
-                <div class="dropdown  mb-5">
+                </div> 
+                 <!-- <div class="dropdown  mb-5">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Secciones
                     </button>
@@ -105,7 +94,7 @@
                       <li><button class="dropdown-item" type="button"  v-model="secciones">Accesorios</button></li>
                       <li><button class="dropdown-item" type="button"  v-model="secciones">Iluminación</button></li>
                     </ul>
-                  </div>
+                  </div>-->
             </div>
                 <button type="button" class="btn btn-success" v-on:click="grabar()">Cargar producto</button>
         </form>
