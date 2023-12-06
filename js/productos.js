@@ -3,7 +3,7 @@ const { createApp } = Vue
         data() {
             return {
                 productos:[],
-                url:'https://abelitu.pythonanywhere.com/productos', 
+                url:'https://abelitu.pythonanywhere.com/productos', // Sección objetos -->  https://abelitu.pythonanywhere.com/productos/seccion/Objetos
                 error:false,
                 cargando:true,
                 
