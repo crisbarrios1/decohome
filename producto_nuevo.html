@@ -47,56 +47,19 @@
                 <img width="100" :src="imagen" alt="">
             </div>
             <div>
-               <div id="miSelect" v-model="secciones"  class="form-check mb-3 mt-5">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" v-model="secciones">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Sección textiles
-                    </label>
-                </div>
-                <div id="miSelect" v-model="secciones"  class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" v-model="secciones">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Sección objetos
-                    </label>
-                </div>
-                <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" v-model="secciones">
-                    <label class="form-check-label" for="flexRadioDefault3">
-                        Sección plantas
-                    </label>
-                </div>
-                <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" v-model="secciones">
-                    <label class="form-check-label" for="flexRadioDefault4">
-                        Sección cristalería
-                    </label>
-                </div>
-                <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" v-model="secciones">
-                    <label class="form-check-label" for="flexRadioDefault5">
-                        Sección accesorios
-                    </label>
-                </div>
-                <div class="form-check mb-5">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6" v-model="secciones">
-                    <label class="form-check-label" for="flexRadioDefault6">
-                        Sección iluminación
-                    </label>
-                </div> 
-                 <!-- <div class="dropdown  mb-5">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Secciones
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><button class="dropdown-item" type="button"  v-model="secciones">Textiles</button></li>
-                      <li><button class="dropdown-item" type="button"  v-model="secciones">Objetos</button></li>
-                      <li><button class="dropdown-item" type="button"  v-model="secciones">Plantas</button></li>
-                      <li><button class="dropdown-item" type="button"  v-model="secciones">Cristalería</button></li>
-                      <li><button class="dropdown-item" type="button"  v-model="secciones">Accesorios</button></li>
-                      <li><button class="dropdown-item" type="button"  v-model="secciones">Iluminación</button></li>
-                    </ul>
-                  </div>-->
-            </div>
+                <label for="exampleDataList" class="form-label">Sección</label>
+                <input  list="datalistOptions" id="secciones" name="secciones" v-model="secciones" placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                <option value="Textiles">
+                <option value="Objetos">
+                <option value="Plantas">
+                <option value="Cristalería">
+                <option value="Accesorios">
+                <option value="Iluminación">
+                </datalist>
+              </div>
+                              
+           
                 <button type="button" class="btn btn-success" v-on:click="grabar()">Cargar producto</button>
         </form>
     </div>
