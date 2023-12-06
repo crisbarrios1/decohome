@@ -47,8 +47,7 @@ const { createApp } = Vue
                 precio: this.precio,
                 stock: this.stock,
                 imagen:this.imagen,
-                secciones:this.secciones,
-                altaProducto:this.altaProducto
+                secciones:this.secciones
 
             }
             var options = {
