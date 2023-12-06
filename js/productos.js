@@ -5,14 +5,13 @@ const { createApp } = Vue
                 productos:[],
                 url:'https://abelitu.pythonanywhere.com/productos', // Sección objetos -->  https://abelitu.pythonanywhere.com/productos/seccion/Objetos
                 error:false,
-                cargando:true,
-                
+                cargando:true,                
                 id:0,
                 nombre:"",
                 imagen:"",
                 stock:0,
                 precio:0,
-                secciones:"",
+                secciones:""
                 }
                 },
                 methods: {
