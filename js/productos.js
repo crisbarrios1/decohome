@@ -56,6 +56,7 @@ const { createApp } = Vue
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro grabado")
+                    alert("¿Desea agregar algún producto más?");
                     window.location.href = "./productos.html";
                 })
                 .catch(err => {
@@ -69,3 +70,41 @@ const { createApp } = Vue
         this.fetchData(this.url)
     },
 }).mount('#app')
+
+
+// Js del pop-up
+
+
+let btnAbrirPopup = document.getElementById('btn-abrir-popup'),
+	overlay = document.getElementById('overlay'),
+	popup = document.getElementById('popup'),
+	btnCerrarPopup = document.getElementById('btn-cerrar-popup');
+
+btnAbrirPopup.addEventListener('click', function(){
+	overlay.classList.add('active');
+	popup.classList.add('active');
+});
+
+btnCerrarPopup.addEventListener('click', function(e){
+	e.preventDefault();
+	overlay.classList.remove('active');
+	popup.classList.remove('active');
+});
+
+
+
+let btnAbrirPopupe = document.getElementById('btn-abrir-popupe'),
+	overlaye = document.getElementById('overlaye'),
+	popupe = document.getElementById('popupe'),
+	btnCerrarPopupe = document.getElementById('btn-cerrar-popupe');
+
+btnAbrirPopupe.addEventListener('click', function(){
+	overlaye.classList.add('active');
+	popupe.classList.add('active');
+});
+
+btnCerrarPopupe.addEventListener('click', function(e){
+	e.preventDefault();
+	overlaye.classList.remove('active');
+	popupe.classList.remove('active');
+});

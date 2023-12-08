@@ -3,7 +3,7 @@
 <link>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/imagenes-y-videos/favicon72x72.png" type="image/png?"></link>
+    <link rel="icon" href="./imagenes-y-videos/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Document</title>
@@ -28,7 +28,7 @@
     <div id="app" class="container-crud">
         <h1>Productos</h1>
         <br>
-         <a class="btn btn-primary" href="producto_nuevo.html">Agregar producto</a>
+         <a id="btn-abrir-popup"  class="btn btn-primary" >Agregar producto</a>  <!--href="producto_nuevo.html"-->
         <br>
         <br>
         <div v-if="error">
@@ -51,7 +51,7 @@
                             <th scope="col">Stock</th>
                             <th scope="col">Imagen</th>
                             <th scope="col">Sección</th>
-                            <th scope="col">Acciones</th>
+                            <th class="acciones" scope="col">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -65,7 +65,7 @@
                                 </td>
                                 <td>{{producto.secciones}}</td>
                                 <td>
-                                    <a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id" >Editar</a>
+                                    <a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id">Editar</a>
                                     <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>
                                 </td>
                             </tr>
@@ -74,8 +74,52 @@
                 </div>
             </section>
         </div>
+        
+        
+		<div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">X</i></a>
+				<div class="container" id="app">
+                    <form style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
+                        <h1 class="mb-5">Alta de Producto</h1>
+                        <div class="mb-3">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" v-model="nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="precio">Precio</label>
+                            <input type="number" name="precio" id="precio" v-model="precio">
+                        </div>
+            
+                        <div class="mb-3">
+                            <label for="stock">Stock</label>
+                            <input type="number" name="stock" id="stock" v-model="stock">
+                        </div>
+                        <div class="mb-3 agregarImagen">
+                            <label for="imagen">Imagen</label>
+                            <input type="text" name="imagen" id="imagen" v-model="imagen">
+                            <img width="100" :src="imagen" alt="">
+                        </div>
+                        <div class="seccion">
+                            <label for="exampleDataList" class="form-label">Sección</label>
+                            <input  list="datalistOptions" id="secciones" name="secciones" v-model="secciones" placeholder="Type to search...">
+                            <datalist id="datalistOptions">
+                            <option value="Textiles">
+                            <option value="Objetos">
+                            <option value="Plantas">
+                            <option value="Cristalería">
+                            <option value="Accesorios">
+                                <option value="Iluminación">
+                            </datalist>
+                                                       
+                        </div>
+                            <button type="button" class="btn btn-success" v-on:click="grabar()">Cargar producto</button>
+                    </form>
+                </div>
+			</div>
+		</div>
     </div>
-</main>
+    </main>
     <!-- Link de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>    
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
