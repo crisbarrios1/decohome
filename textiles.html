@@ -96,7 +96,24 @@
         </div>
             
         <!-- ----------- Productos seleccionados -------------- -->
-        
+        <section  class="prodSeleccionadosb margin-top-extra">            
+            <article class="prodSeleccionados-imgh2b" id="app">
+                <div class="table table-bordered">
+                    <div class="" v-for="producto in productos" id="V-for">
+                        <div>
+                            <img :src="producto.imagen" :alt="producto.nombre">
+                        </div>
+                        <div>
+                             <h2 class="articulo">{{producto.nombre}}</h2>
+                        </div>
+                        <div class="precio">
+                            <h3 class="price">$ {{producto.precio}}⁰⁰</h3>
+                            <div></div><button class="btn-add-cart" v-on:click="addToCart(producto)">Añadir al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </article> 
+        </section>
         <section  class="prodSeleccionadosc margin-top-extra">
             <article class="prodSeleccionados-imgh2c" id="app">
                 <div class="table table-bordered">
@@ -330,22 +347,6 @@
                         </div>
                         <div>
                                 <h2 class="articulo">Manta</h2>
-                        </div>
-                        <div class="precio">
-                            <h3 class="price">$9000⁰⁰</h3>
-                            <button class="btn-add-cart">Añadir al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="prodSeleccionados-imgh2c" id="app">
-                <div class="table table-bordered">
-                    <div class="contenedorCards">
-                        <div>
-                            <img src="./imagenes-y-videos/Textil/mantel-redondo.png" alt="">
-                        </div>
-                        <div>
-                                <h2 class="articulo">Mantel redondo</h2>
                         </div>
                         <div class="precio">
                             <h3 class="price">$9000⁰⁰</h3>

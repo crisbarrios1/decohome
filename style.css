@@ -747,9 +747,22 @@ margin-bottom: 7em;
 	background: rgba(94,125,227, .9);
 }
 
+.btn img{
+    width: 1.3em;
+}
+
+.container-excel-pdf{
+    display: flex;
+    justify-content: space-between;
+}
+
 .mb-3{
     display: flex;
     justify-content: space-around;
+}
+
+tbody tr{
+    vertical-align: middle;
 }
 
 .seccion{    

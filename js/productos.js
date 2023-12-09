@@ -1,3 +1,4 @@
+
 const { createApp } = Vue
     createApp({
         data() {
@@ -56,7 +57,6 @@ const { createApp } = Vue
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro grabado")
-                    alert("¿Desea agregar algún producto más?");
                     window.location.href = "./productos.html";
                 })
                 .catch(err => {
@@ -108,3 +108,7 @@ btnCerrarPopupe.addEventListener('click', function(e){
 	overlaye.classList.remove('active');
 	popupe.classList.remove('active');
 });
+
+        // Función para exportar a Excel
+        
+                
