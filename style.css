@@ -15,6 +15,73 @@
   
 }
 
+.loginContainer{
+    width: 22em;
+    height: 22em;
+    font-size: 20px;
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: #fff; 
+    padding: 20px; 
+    box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 13px;
+}
+
+.loginContainer .cerrarButton{
+    margin-left: 9em;
+    font-size: 40px;
+    border: none;
+    background-color: #4d2faf00;
+    cursor: pointer;
+   
+}
+
+.loginContainer .cerrarButton:hover{
+    color: #4d2faf;
+   
+}
+
+.loginContainer .loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginForm input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30em;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.loginForm button{
+    width: 14em;
+    background-color: darkcyan;
+    color: white;
+    font-size: 15px;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.loginForm button:hover{
+    width: 14em;
+    background-color: darkcyan;
+    color: black;
+    
+}
+
+.loginForm input{
+    border-color: darkcyan;
+    border-radius: 10px;
+}
+
 .contenedorLinks{
   display:flex;
 }
@@ -79,6 +146,11 @@ nav {
     height: 4rem;
     margin-top: 6em;
     background-color: #276780;
+}
+
+.adminIcon{
+    width: 3em;
+    cursor:pointer;
 }
 
 main{
@@ -850,12 +922,17 @@ tbody tr{
     }
     
     
+.miniNav{
+    z-index: 1;
+}
+    
 
     .burguer-menu{
         display: block;
         position: fixed;
         right: 0;
         padding: 2em 3em 0 0;
+        z-index: 2;
     }
 
     .burguer-menu img{
@@ -933,6 +1010,13 @@ tbody tr{
             padding-bottom: 0;
         }
 
+.precio button{
+    font-size: .6em;
+    height: 1.5em;
+    background-color: #4e278000;
+    border: none;
+    cursor: pointer;
+}
 
     .container-titulo{
         font-size: 1em;
@@ -963,9 +1047,31 @@ tbody tr{
        
 
         .prodSeleccionados-imgh2b h2{
-            font-size: .7em;
+            font-size: 1.3em;
+        }
+
+        .precio{
+            width: 5em;
+        }
+
+        .precio .button{
+            width: 1em;
         }
         
+        .price{
+            font-size: 13px;
+            width: 5em;
+        }
+
+       
+
+        .prodSeleccionados-imgh2b {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
         .prodSeleccionados-imgh2b img{
             width: 6.4em;
 
@@ -1026,6 +1132,8 @@ tbody tr{
 }
 
 
+
+
 @media( min-width: 501px) and (max-width:1200px){
     nav{
         flex-direction: row;
@@ -1070,6 +1178,14 @@ tbody tr{
     nav .nav-label img{
         display: none;
     }
+
+.miniNav{
+    height: 4rem;
+    margin-top: 6em;
+    background-color: #276780;
+    z-index: 0;
+}
+    
 
     .frase-video{
         padding: 0;

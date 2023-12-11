@@ -32,10 +32,27 @@
 
     </nav>
     <nav class="miniNav">
-        <a href="index.html">
-            <div class="container-logo">                
+        <div id="loginAdmin">
+            <button style="background-color: #276780; border: none;" onclick="openLoginPopup()" title="Ingrese como administrador" >
+            <img class="adminIcon" src="./imagenes-y-videos/admin.png">          
+            </button>
+            <div id="loginContainer" class="loginContainer">
+                <button class="cerrarButton" onclick="closeLoginPopup()">X</button>
+              <h1>Login</h1>
+              <form id="loginForm" class="loginForm">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" required>
+                <br>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" required>
+                <br>
+                <button type="button" onclick="attemptLogin()">Iniciar sesión</button>
+              </form>
             </div>
-        </a>
+          </div>
+
+        
+
         <div class="container-icon">
             <div class="container-cart-icon">
                 <svg
@@ -189,9 +206,43 @@
             </section> 
         </div>    
         <div class="copyright">
-            <p>Copyright 2023 &copy; Cristian Barrios / Abel </p>
+            <p>Copyright 2023 &copy; Cristian Barrios / Abel Iturralde</p>
         </div>     
     </footer>
+
+
+    <script>
+function openLoginPopup() {
+  document.getElementById('loginContainer').style.display = 'block';
+}
+
+function closeLoginPopup() {
+  document.getElementById('loginContainer').style.display = 'none';
+}
+
+function attemptLogin() {
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+
+  if (!username || !password) {
+    alert('Por favor, completa todos los campos.');
+    return;
+  }
+
+  // Verificar el nombre de usuario y la contraseña (puedes implementar tu lógica aquí)
+  if (username === 'admin' && password === '123') {
+    // Usuario autenticado
+    alert('Ingreso exitoso. Redirigiendo...');
+    // Aquí puedes redirigir a tu página de CRUD
+    // window.location.href = 'ruta-de-tu-pagina-crud.html';
+    window.location.href = 'https://crisbarrios1.github.io/decohome/productos.html';
+    closeLoginPopup(); // Cierra el popup después de iniciar sesión
+  } else {
+    alert('Credenciales incorrectas. Intenta de nuevo.');
+    // Puedes agregar lógica adicional, como bloquear después de varios intentos fallidos
+  }
+}
+</script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./carrito-compras-javascript-main/carritoScript.js"></script>
     <script src="./js/productos.js"></script>

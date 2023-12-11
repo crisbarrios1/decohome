@@ -94,3 +94,24 @@ const { createApp } = Vue
                 this.fetchData(this.url)
                 },
                 }).mount('#app')
+
+
+
+function admin () {
+    pass = document.getElementById("pass").value;
+    if (pass !== null) {
+        // Tomar decisiones basadas en el valor ingresado
+        if (pass == "admin123") {
+            alert("Contraseña correcta");
+            window.location.href = 'productos.html';
+        } else {
+            alert("Contraseña incorrecta.");
+            window.location.href = 'index.html'
+        }
+        } else {
+        // El usuario presionó Cancelar en el prompt
+        alert("Operación cancelada, no ingresaste ninguna clave.");
+        window.location.href = 'index.html'
+        }
+    }
+                
