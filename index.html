@@ -229,17 +229,16 @@ function attemptLogin() {
     return;
   }
 
-  // Verificar el nombre de usuario y la contraseña (puedes implementar tu lógica aquí)
+  
   if (username === 'admin' && password === '123') {
-    // Usuario autenticado
+  
     alert('Ingreso exitoso. Redirigiendo...');
-    // Aquí puedes redirigir a tu página de CRUD
-    // window.location.href = 'ruta-de-tu-pagina-crud.html';
     window.location.href = 'https://crisbarrios1.github.io/decohome/productos.html';
-    closeLoginPopup(); // Cierra el popup después de iniciar sesión
+    closeLoginPopup(); 
+
   } else {
     alert('Datos mal ingresados. Intenta de nuevo.');
-    // Puedes agregar lógica adicional, como bloquear después de varios intentos fallidos
+    
   }
 }
 </script>
